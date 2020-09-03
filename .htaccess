@@ -9,10 +9,17 @@
 #Server Zend Selesai ---------------------
 
 #Server Biasa Mulai ---------------------
-RewriteEngine on
-RewriteCond $1 !^(index\.php|robots\.txt)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?/$1 [L]
+#RewriteEngine on
+#RewriteCond $1 !^(index\.php|robots\.txt)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?/$1 [L]
 #Server Biasa Selesai ---------------------
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /ci/posku/
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^ index.php [QSA,L]
+</IfModule>
 

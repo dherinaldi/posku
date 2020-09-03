@@ -25,3 +25,4 @@ class Dashboard extends Cek_Controller{
         redirect('login');
     }
 }
+
